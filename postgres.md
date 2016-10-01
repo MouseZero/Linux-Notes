@@ -29,3 +29,10 @@ FROM actor
 WHERE actor_id < 11
 ORDER BY first_name;
 ```
+COUNT and GROUP BY
+``` sql
+SELECT first_name, COUNT(first_name)
+FROM actor
+WHERE actor_id BETWEEN 100 AND 200
+GROUP BY first_name;
+```
