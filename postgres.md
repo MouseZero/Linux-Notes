@@ -8,7 +8,11 @@ To import a tar with an account that has a password
 ``` sh
 pg_restore -U dev -d dvdrental /tmp/dvd.tar -W -h localhost
 ```
-#### Basic Commands
+#### PSQL Commands
 ``` sql
-create database name
+CREATE DATABASE name;
+```
+Copy a table to a CSV file
+``` sql
+COPY actor TO '/tmp/exported.csv' DELIMITER ',' CSV;
 ```
