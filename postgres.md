@@ -16,9 +16,16 @@ Copy a table to a CSV file
 ``` sql
 COPY actor TO '/tmp/exported.csv' DELIMITER ',' CSV;
 ```
-Where statement
+WHERE statement
 ``` sql
 SELECT *
 FROM actor
 WHERE actor_id < 11;
+```
+ORDER BY statement
+``` sql
+SELECT *
+FROM actor
+WHERE actor_id < 11
+ORDER BY first_name;
 ```
