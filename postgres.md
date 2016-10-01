@@ -49,3 +49,9 @@ INSERT INTO statement. Make sure to check the schema for automatically filled co
 INSERT INTO actor (first_name, last_name)
 VALUES ('Robert', 'Johnson');
 ```
+DELETE
+``` sql
+DELETE
+FROM actor
+WHERE first_name = 'Robert';
+```
