@@ -16,3 +16,9 @@ Copy a table to a CSV file
 ``` sql
 COPY actor TO '/tmp/exported.csv' DELIMITER ',' CSV;
 ```
+Where statement
+``` sql
+SELECT *
+FROM actor
+WHERE actor_id < 11;
+```
