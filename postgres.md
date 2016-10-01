@@ -29,10 +29,23 @@ FROM actor
 WHERE actor_id < 11
 ORDER BY first_name;
 ```
-COUNT and GROUP BY
+COUNT and GROUP BY. Note that COUNT is an aggregate function that changes how the query acts and the GROUP BY keyword is required
 ``` sql
 SELECT first_name, COUNT(first_name)
 FROM actor
 WHERE actor_id BETWEEN 100 AND 200
 GROUP BY first_name;
+```
+When you use an "aggregate function" you need to use "HAVING" to add requirements not "WHERE"
+``` sql
+SELECT first_name, COUNT(first_name)
+FROM actor
+WHERE actor_id BETWEEN 100 AND 200
+GROUP BY first_name
+HAVING COUNT(first_name) > 1;
+```
+INSERT INTO statement. Make sure to check the schema for automatically filled columns.
+``` sql
+INSERT INTO actor (first_name, last_name)
+VALUES ('Robert', 'Johnson');
 ```
