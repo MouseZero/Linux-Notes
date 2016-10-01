@@ -4,6 +4,10 @@ To open postgres as an admin in linux use
 ``` sh
 sudo -u postgres psql postgres
 ```
+Import a .sql file
+``` sh
+sudo -u postgres psql db_name < import_file.sql
+```
 To import a tar with an account that has a password
 ``` sh
 pg_restore -U dev -d dvdrental /tmp/dvd.tar -W -h localhost
